@@ -1,0 +1,10 @@
+// Exemplo 2:
+
+int main () {
+    int i = 1;
+    char s[] = "xp\tto\n";
+    print("este é um teste:", s);
+    print(i);
+    print();
+    return 0;
+}

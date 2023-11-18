@@ -1,0 +1,76 @@
+/* comments */
+
+// single-line comment
+// single // line // coment //
+// /* /* */ *//
+
+/* multi-line
+   coment */
+/* *** multi-line *** /*
+   /* comment *** 
+   //*/
+   
+/* reserved keywords */
+assert
+break
+char
+else
+for
+if
+int
+print
+read
+return
+void
+while
+
+/* identifiers */
+foo_
+_ bar239_foo
+
+/* int const */
+2
+-3
+
+/* char const */
+'\n'
+'\\'
+'\''
+' '
+
+/* string const */
+"foooo bar \' \' \r \t \n \\ \"foo\""
+
+/* operators */
++
+-
+*
+/
+%
+<=
+<
+>=
+>
+==
+!=
+||
+&&
+!
+
+/* assignment */
+=
+
+/* delimiters */
+(
+)
+[
+]
+{
+}
+,
+;
+
+// edge cases
+9898abcde
++-*/%<=<>=>||==!!=&&
+'abc?'

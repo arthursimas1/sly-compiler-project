@@ -1,0 +1,7 @@
+// Illegal character '$' at 5:5
+int main()
+{
+  int x;
+  x$ = 5;
+}
+/*
