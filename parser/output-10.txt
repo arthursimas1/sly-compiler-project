@@ -1,0 +1,38 @@
+┬─ program
+└─┬─┬─ function_definition
+  │ ├─ type_specifier: int
+  │ ├─┬─ function_declarator
+  │ │ ├─ identifier: square
+  │ │ └───┬─ parameter_declaration
+  │ │     ├─ type_specifier: int
+  │ │     └─ identifier: a
+  │ └─┬─ compound_statement
+  │   └───┬─ return
+  │       └─────┬─ binary_expression: *
+  │             ├─ identifier: a
+  │             └─ identifier: a
+  └─┬─ function_definition
+    ├─ type_specifier: int
+    ├─┬─ function_declarator
+    │ ├─ identifier: main
+    │ └─ None
+    └─┬─ compound_statement
+      ├─┬─┬─ declaration
+      │ │ ├─ type_specifier: int
+      │ │ └───┬─ init_declarator
+      │ │     ├─ identifier: num
+      │ │     └─ constant: int, 2
+      │ └─┬─ declaration
+      │   ├─ type_specifier: int
+      │   └───┬─ init_declarator
+      │       ├─ identifier: num2
+      │       └─┬─ function_call
+      │         ├─ identifier: square
+      │         └─── identifier: num
+      └─┬─┬─ print
+        │ └─┬─ constant: string, "Square of "
+        │   ├─ identifier: num
+        │   ├─ constant: string, " is "
+        │   └─ identifier: num2
+        └─┬─ return
+          └─── constant: int, 0

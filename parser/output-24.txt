@@ -1,0 +1,77 @@
+┬─ program
+└─┬─┬─ function_definition
+  │ ├─ type_specifier: int
+  │ ├─┬─ function_declarator
+  │ │ ├─ identifier: f
+  │ │ └─┬─┬─ parameter_declaration
+  │ │   │ ├─ type_specifier: int
+  │ │   │ └─ identifier: n
+  │ │   └─┬─ parameter_declaration
+  │ │     ├─ type_specifier: int
+  │ │     └─ identifier: k
+  │ └─┬─ compound_statement
+  │   ├───┬─ declaration
+  │   │   ├─ type_specifier: int
+  │   │   └─┬─┬─ init_declarator
+  │   │     │ ├─ identifier: p
+  │   │     │ └─ None
+  │   │     ├─┬─ init_declarator
+  │   │     │ ├─ identifier: q
+  │   │     │ └─ None
+  │   │     └─┬─ init_declarator
+  │   │       ├─ identifier: t
+  │   │       └─ None
+  │   └───┬─ if
+  │       ├───┬─ binary_expression: <
+  │       │   ├─ identifier: n
+  │       │   └─ constant: int, 2
+  │       ├─┬─ compound_statement
+  │       │ └─┬───┬─ assign
+  │       │   │   ├─ identifier: k
+  │       │   │   └─ constant: int, 0
+  │       │   └─┬─ return
+  │       │     └─── identifier: n
+  │       └─┬─ compound_statement
+  │         └─┬───┬─ assign
+  │           │   ├─ identifier: t
+  │           │   └─┬─ binary_expression: +
+  │           │     ├─┬─ function_call
+  │           │     │ ├─ identifier: f
+  │           │     │ └─┬─┬─ binary_expression: -
+  │           │     │   │ ├─ identifier: n
+  │           │     │   │ └─ constant: int, 1
+  │           │     │   └─ identifier: p
+  │           │     └─┬─ function_call
+  │           │       ├─ identifier: f
+  │           │       └─┬─┬─ binary_expression: -
+  │           │         │ ├─ identifier: n
+  │           │         │ └─ constant: int, 2
+  │           │         └─ identifier: q
+  │           ├───┬─ assign
+  │           │   ├─ identifier: k
+  │           │   └─┬─ binary_expression: +
+  │           │     ├─┬─ binary_expression: +
+  │           │     │ ├─ identifier: p
+  │           │     │ └─ identifier: q
+  │           │     └─ constant: int, 1
+  │           └─┬─ return
+  │             └─── identifier: t
+  └─┬─ function_definition
+    ├─ type_specifier: int
+    ├─┬─ function_declarator
+    │ ├─ identifier: main
+    │ └─ None
+    └─┬─ compound_statement
+      ├───┬─ declaration
+      │   ├─ type_specifier: int
+      │   └───┬─ init_declarator
+      │       ├─ identifier: m
+      │       └─ constant: int, 9
+      └─┬─┬─ print
+        │ └─┬─┬─ function_call
+        │   │ ├─ identifier: f
+        │   │ └─┬─ constant: int, 3
+        │   │   └─ identifier: m
+        │   └─ identifier: m
+        └─┬─ return
+          └─── constant: int, 0

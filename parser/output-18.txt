@@ -1,0 +1,15 @@
+┬─ program
+└───┬─ function_definition
+    ├─ type_specifier: int
+    ├─┬─ function_declarator
+    │ ├─ identifier: main
+    │ └─ None
+    └─┬─ compound_statement
+      └─┬───┬─ assign
+        │   ├─ identifier: phoenix_number
+        │   └─ constant: int, 142857
+        ├─┬─ print
+        │ └─┬─ identifier: phoenix_number
+        │   └─ constant: string, "\n"
+        └─┬─ return
+          └─── constant: int, 0

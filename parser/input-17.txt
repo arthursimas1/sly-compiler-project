@@ -1,0 +1,5 @@
+/* programa trivial */
+int main()
+{
+  print(1);
+}

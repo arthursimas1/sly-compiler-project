@@ -1,0 +1,69 @@
+┬─ program
+└─┬─┬─ function_definition
+  │ ├─ type_specifier: int
+  │ ├─┬─ function_declarator
+  │ │ ├─ identifier: gcd
+  │ │ └─┬─┬─ parameter_declaration
+  │ │   │ ├─ type_specifier: int
+  │ │   │ └─ identifier: x
+  │ │   └─┬─ parameter_declaration
+  │ │     ├─ type_specifier: int
+  │ │     └─ identifier: y
+  │ └─┬─ compound_statement
+  │   ├───┬─ declaration
+  │   │   ├─ type_specifier: int
+  │   │   └───┬─ init_declarator
+  │   │       ├─ identifier: g
+  │   │       └─ identifier: y
+  │   └─┬─┬─ while
+  │     │ ├───┬─ binary_expression: >
+  │     │ │   ├─ identifier: x
+  │     │ │   └─ constant: int, 0
+  │     │ └─┬─ compound_statement
+  │     │   └─┬───┬─ assign
+  │     │     │   ├─ identifier: g
+  │     │     │   └─ identifier: x
+  │     │     ├───┬─ assign
+  │     │     │   ├─ identifier: x
+  │     │     │   └─┬─ binary_expression: -
+  │     │     │     ├─ identifier: y
+  │     │     │     └─┬─ binary_expression: *
+  │     │     │       ├───┬─ binary_expression: /
+  │     │     │       │   ├─ identifier: y
+  │     │     │       │   └─ identifier: x
+  │     │     │       └─ identifier: x
+  │     │     └───┬─ assign
+  │     │         ├─ identifier: y
+  │     │         └─ identifier: g
+  │     └─┬─ return
+  │       └─── identifier: g
+  └─┬─ function_definition
+    ├─ type_specifier: void
+    ├─┬─ function_declarator
+    │ ├─ identifier: main
+    │ └─ None
+    └─┬─ compound_statement
+      ├───┬─ declaration
+      │   ├─ type_specifier: int
+      │   └─┬─┬─ init_declarator
+      │     │ ├─ identifier: a
+      │     │ └─ None
+      │     └─┬─ init_declarator
+      │       ├─ identifier: b
+      │       └─ None
+      └─┬─┬─ print
+        │ └─── constant: string, "give-me two integers separated by space:"
+        ├─┬─ read
+        │ └─┬─ identifier: a
+        │   └─ identifier: b
+        ├─┬─ print
+        │ └─┬─ constant: string, "GCD of "
+        │   ├─ identifier: a
+        │   ├─ identifier: b
+        │   ├─ constant: string, " is "
+        │   └─┬─ function_call
+        │     ├─ identifier: gcd
+        │     └─┬─ identifier: a
+        │       └─ identifier: b
+        └─┬─ return
+          └─ None

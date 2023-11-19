@@ -1,0 +1,28 @@
+┬─ program
+└───┬─ function_definition
+    ├─ type_specifier: int
+    ├─┬─ function_declarator
+    │ ├─ identifier: main
+    │ └─ None
+    └─┬─ compound_statement
+      ├─┬─┬─ declaration
+      │ │ ├─ type_specifier: int
+      │ │ └───┬─ init_declarator
+      │ │     ├─ identifier: i
+      │ │     └─ constant: int, 1
+      │ └─┬─ declaration
+      │   ├─ type_specifier: char
+      │   └───┬─ init_declarator
+      │       ├─┬─ array_declarator
+      │       │ ├─ identifier: s
+      │       │ └─ None
+      │       └─ constant: string, "xpto"
+      └─┬─┬─ print
+        │ └─┬─ constant: string, "este é um teste:"
+        │   └─ identifier: s
+        ├─┬─ print
+        │ └─── identifier: i
+        ├─┬─ print
+        │ └─ None
+        └─┬─ return
+          └─── constant: int, 0

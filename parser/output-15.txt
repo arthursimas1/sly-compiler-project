@@ -1,0 +1,49 @@
+┬─ program
+└─┬─┬─ function_definition
+  │ ├─ type_specifier: int
+  │ ├─┬─ function_declarator
+  │ │ ├─ identifier: fat
+  │ │ └───┬─ parameter_declaration
+  │ │     ├─ type_specifier: int
+  │ │     └─ identifier: n
+  │ └─┬─ compound_statement
+  │   └───┬─ if
+  │       ├───┬─ binary_expression: ==
+  │       │   ├─ identifier: n
+  │       │   └─ constant: int, 0
+  │       ├─┬─ return
+  │       │ └─── constant: int, 1
+  │       └─┬─ return
+  │         └───┬─ binary_expression: *
+  │             ├─ identifier: n
+  │             └─┬─ function_call
+  │               ├─ identifier: fat
+  │               └───┬─ binary_expression: -
+  │                   ├─ identifier: n
+  │                   └─ constant: int, 1
+  └─┬─ function_definition
+    ├─ type_specifier: void
+    ├─┬─ function_declarator
+    │ ├─ identifier: main
+    │ └─ None
+    └─┬─ compound_statement
+      └─┬─┬─ assert
+        │ └───┬─ binary_expression: ==
+        │     ├─┬─ function_call
+        │     │ ├─ identifier: fat
+        │     │ └─── constant: int, 5
+        │     └─ constant: int, 120
+        ├─┬─ assert
+        │ └───┬─ binary_expression: ==
+        │     ├─┬─ function_call
+        │     │ ├─ identifier: fat
+        │     │ └─── constant: int, 6
+        │     └─ constant: int, 720
+        ├─┬─ assert
+        │ └───┬─ binary_expression: ==
+        │     ├─┬─ function_call
+        │     │ ├─ identifier: fat
+        │     │ └─── constant: int, 7
+        │     └─ constant: int, 5040
+        └─┬─ return
+          └─ None

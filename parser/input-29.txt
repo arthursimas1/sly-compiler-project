@@ -1,0 +1,24 @@
+/*
+ Simple prime number generator
+ */
+void main()
+{
+    int count = 1;
+    int n = 1;
+    int limit = 100;
+    while (n < limit) {
+        int k=3;
+        int p=1;
+        n=n+2;
+        while (k*k<=n && p) {
+            p=n/k*k!=n;
+            k=k+2;
+        }
+        if (p) {
+            print(n, " is prime\n");
+            count = count + 1;
+        }
+    }
+    print("Total primes found: ", count, "\n");
+	return;
+}

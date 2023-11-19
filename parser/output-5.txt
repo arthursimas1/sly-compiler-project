@@ -1,0 +1,48 @@
+┬─ program
+└───┬─ function_definition
+    ├─ type_specifier: int
+    ├─┬─ function_declarator
+    │ ├─ identifier: main
+    │ └─ None
+    └─┬─ compound_statement
+      ├───┬─ declaration
+      │   ├─ type_specifier: int
+      │   └─┬─┬─ init_declarator
+      │     │ ├─ identifier: i
+      │     │ └─ None
+      │     └─┬─ init_declarator
+      │       ├─ identifier: j
+      │       └─ None
+      └─┬───┬─ assign
+        │   ├─ identifier: i
+        │   └─ constant: int, 1
+        ├───┬─ assign
+        │   ├─ identifier: j
+        │   └─ constant: int, 2
+        ├─┬─ for
+        │ ├─┬─ declaration
+        │ │ ├─ type_specifier: int
+        │ │ └───┬─ init_declarator
+        │ │     ├─ identifier: k
+        │ │     └─ constant: int, 1
+        │ ├───┬─ binary_expression: <
+        │ │   ├─ identifier: k
+        │ │   └─ constant: int, 10
+        │ ├───┬─ assign
+        │ │   ├─ identifier: k
+        │ │   └─┬─ binary_expression: +
+        │ │     ├─ identifier: k
+        │ │     └─ constant: int, 1
+        │ └───┬─ assign
+        │     ├─ identifier: i
+        │     └─┬─ binary_expression: +
+        │       ├─ identifier: i
+        │       └─┬─ binary_expression: *
+        │         ├─ identifier: j
+        │         └─ identifier: k
+        ├─┬─ assert
+        │ └───┬─ binary_expression: ==
+        │     ├─ identifier: i
+        │     └─ constant: int, 91
+        └─┬─ return
+          └─── constant: int, 0

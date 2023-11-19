@@ -1,0 +1,13 @@
+┬─ program
+└───┬─ global_declaration
+    └─┬─ declaration
+      ├─ type_specifier: int
+      └─┬─┬─ init_declarator
+        │ ├─ identifier: x
+        │ └─ None
+        ├─┬─ init_declarator
+        │ ├─ identifier: y
+        │ └─ None
+        └─┬─ init_declarator
+          ├─ identifier: z
+          └─ constant: int, 5

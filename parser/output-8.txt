@@ -1,0 +1,41 @@
+┬─ program
+└───┬─ function_definition
+    ├─ type_specifier: int
+    ├─┬─ function_declarator
+    │ ├─ identifier: main
+    │ └─ None
+    └─┬─ compound_statement
+      ├───┬─ declaration
+      │   ├─ type_specifier: int
+      │   └───┬─ init_declarator
+      │       ├─┬─ array_declarator
+      │       │ ├─ identifier: a
+      │       │ └─ constant: int, 3
+      │       └─┬─ constant: int, 1
+      │         └─ constant: int, 2
+      └─┬───┬─ assign
+        │   ├─┬─ array_reference
+        │   │ ├─ identifier: a
+        │   │ └─── constant: int, 2
+        │   └─┬─ binary_expression: +
+        │     ├─┬─ array_reference
+        │     │ ├─ identifier: a
+        │     │ └─── constant: int, 1
+        │     └─┬─ array_reference
+        │       ├─ identifier: a
+        │       └─── constant: int, 2
+        ├───┬─ assign
+        │   ├─┬─ array_reference
+        │   │ ├─ identifier: a
+        │   │ └─── constant: int, 2
+        │   └─┬─ binary_expression: +
+        │     ├─┬─ array_reference
+        │     │ ├─ identifier: a
+        │     │ └─── constant: int, 2
+        │     └─ constant: int, 1
+        ├─┬─ print
+        │ └───┬─ array_reference
+        │     ├─ identifier: a
+        │     └─── constant: int, 2
+        └─┬─ return
+          └─── constant: int, 0

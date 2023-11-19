@@ -1,0 +1,14 @@
+int square(int a)
+{
+  return(a*a);
+}
+
+int main()
+{
+  int num=2;
+  int num2 = square(num);
+
+  print("Square of ", num, " is ", num2);
+
+  return 0;
+}

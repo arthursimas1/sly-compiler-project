@@ -1,0 +1,9 @@
+int main () {
+    int v[] = {1, 2, 5};
+    char s[] = "xpto";
+    int m[][] = {{1,3}, {2,6}, {3,9}};
+    int i = 1, j = 0;
+    print("Isto é um teste:", s[j+2]);
+    print(v[i], m[i][j]);
+    return 0;
+}

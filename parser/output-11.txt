@@ -1,0 +1,125 @@
+┬─ program
+└─┬─┬─ function_definition
+  │ ├─ type_specifier: int
+  │ ├─┬─ function_declarator
+  │ │ ├─ identifier: power
+  │ │ └─┬─┬─ parameter_declaration
+  │ │   │ ├─ type_specifier: int
+  │ │   │ └─ identifier: n
+  │ │   └─┬─ parameter_declaration
+  │ │     ├─ type_specifier: int
+  │ │     └─ identifier: r
+  │ └─┬─ compound_statement
+  │   ├───┬─ declaration
+  │   │   ├─ type_specifier: int
+  │   │   └───┬─ init_declarator
+  │   │       ├─ identifier: p
+  │   │       └─ constant: int, 1
+  │   └─┬─┬─ for
+  │     │ ├─┬─ declaration
+  │     │ │ ├─ type_specifier: int
+  │     │ │ └───┬─ init_declarator
+  │     │ │     ├─ identifier: c
+  │     │ │     └─ constant: int, 1
+  │     │ ├───┬─ binary_expression: <=
+  │     │ │   ├─ identifier: c
+  │     │ │   └─ identifier: r
+  │     │ ├───┬─ assign
+  │     │ │   ├─ identifier: c
+  │     │ │   └─┬─ binary_expression: +
+  │     │ │     ├─ identifier: c
+  │     │ │     └─ constant: int, 1
+  │     │ └───┬─ assign
+  │     │     ├─ identifier: p
+  │     │     └─┬─ binary_expression: *
+  │     │       ├─ identifier: p
+  │     │       └─ identifier: n
+  │     └─┬─ return
+  │       └─── identifier: p
+  └─┬─ function_definition
+    ├─ type_specifier: int
+    ├─┬─ function_declarator
+    │ ├─ identifier: main
+    │ └─ None
+    └─┬─ compound_statement
+      ├─┬─┬─ declaration
+      │ │ ├─ type_specifier: int
+      │ │ └─┬─┬─ init_declarator
+      │ │   │ ├─ identifier: n
+      │ │   │ └─ None
+      │ │   └─┬─ init_declarator
+      │ │     ├─ identifier: sum
+      │ │     └─ constant: int, 0
+      │ └─┬─ declaration
+      │   ├─ type_specifier: int
+      │   └─┬─┬─ init_declarator
+      │     │ ├─ identifier: temp
+      │     │ └─ None
+      │     ├─┬─ init_declarator
+      │     │ ├─ identifier: remainder
+      │     │ └─ None
+      │     └─┬─ init_declarator
+      │       ├─ identifier: digits
+      │       └─ constant: int, 0
+      └─┬─┬─ print
+        │ └─── constant: string, "Input an integer: "
+        ├─┬─ read
+        │ └─── identifier: n
+        ├───┬─ assign
+        │   ├─ identifier: temp
+        │   └─ identifier: n
+        ├─┬─ while
+        │ ├───┬─ binary_expression: !=
+        │ │   ├─ identifier: temp
+        │ │   └─ constant: int, 0
+        │ └─┬─ compound_statement
+        │   └─┬───┬─ assign
+        │     │   ├─ identifier: digits
+        │     │   └─┬─ binary_expression: +
+        │     │     ├─ identifier: digits
+        │     │     └─ constant: int, 1
+        │     └───┬─ assign
+        │         ├─ identifier: temp
+        │         └─┬─ binary_expression: /
+        │           ├─ identifier: temp
+        │           └─ constant: int, 10
+        ├───┬─ assign
+        │   ├─ identifier: temp
+        │   └─ identifier: n
+        ├─┬─ while
+        │ ├───┬─ binary_expression: !=
+        │ │   ├─ identifier: temp
+        │ │   └─ constant: int, 0
+        │ └─┬─ compound_statement
+        │   └─┬───┬─ assign
+        │     │   ├─ identifier: remainder
+        │     │   └─┬─ binary_expression: %
+        │     │     ├─ identifier: temp
+        │     │     └─ constant: int, 10
+        │     ├───┬─ assign
+        │     │   ├─ identifier: sum
+        │     │   └─┬─ binary_expression: +
+        │     │     ├─ identifier: sum
+        │     │     └─┬─ function_call
+        │     │       ├─ identifier: power
+        │     │       └─┬─ identifier: remainder
+        │     │         └─ identifier: digits
+        │     └───┬─ assign
+        │         ├─ identifier: temp
+        │         └─┬─ binary_expression: /
+        │           ├─ identifier: temp
+        │           └─ constant: int, 10
+        ├─┬─ if
+        │ ├───┬─ binary_expression: ==
+        │ │   ├─ identifier: n
+        │ │   └─ identifier: sum
+        │ ├─┬─ print
+        │ │ └─┬─ identifier: n
+        │ │   └─ constant: string, " is an Armstrong number."
+        │ └─┬─ print
+        │   └─┬─ identifier: n
+        │     └─ constant: string, " is not an Armstrong number."
+        ├─┬─ print
+        │ └─ None
+        └─┬─ return
+          └─── constant: int, 0

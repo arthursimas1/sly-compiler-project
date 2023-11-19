@@ -1,0 +1,15 @@
+┬─ program
+└───┬─ function_definition
+    ├─ type_specifier: int
+    ├─┬─ function_declarator
+    │ ├─ identifier: main
+    │ └─ None
+    └─┬─ compound_statement
+      └─┬─┬─ print
+        │ └─── constant: int, 42
+        ├─┬─ print
+        │ └─── constant: string, "\nHello World\nGood Bye\nok\n"
+        ├─┬─ print
+        │ └─── constant: string, "Print a slash n - \\n.\n"
+        └─┬─ return
+          └─── constant: int, 0

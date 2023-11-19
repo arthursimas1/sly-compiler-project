@@ -1,0 +1,78 @@
+┬─ program
+└───┬─ function_definition
+    ├─ type_specifier: int
+    ├─┬─ function_declarator
+    │ ├─ identifier: main
+    │ └─ None
+    └─┬─ compound_statement
+      └─┬─┬─ print
+        │ └─┬─┬─ unary_expression: -
+        │   │ └─┬─ unary_expression: -
+        │   │   └─┬─ unary_expression: -
+        │   │     └─┬─ unary_expression: -
+        │   │       └─┬─ unary_expression: -
+        │   │         └─┬─ unary_expression: -
+        │   │           └─┬─ unary_expression: -
+        │   │             └─┬─ unary_expression: -
+        │   │               └─┬─ unary_expression: -
+        │   │                 └─┬─ unary_expression: -
+        │   │                   └─┬─ unary_expression: -
+        │   │                     └─┬─ unary_expression: -
+        │   │                       └─┬─ unary_expression: -
+        │   │                         └─┬─ unary_expression: -
+        │   │                           └─┬─ unary_expression: -
+        │   │                             └─┬─ unary_expression: -
+        │   │                               └─┬─ unary_expression: -
+        │   │                                 └─┬─ unary_expression: -
+        │   │                                   └─┬─ unary_expression: -
+        │   │                                     └─┬─ unary_expression: -
+        │   │                                       └─┬─ unary_expression: -
+        │   │                                         └─┬─ unary_expression: -
+        │   │                                           └─┬─ unary_expression: -
+        │   │                                             └─┬─ unary_expression: -
+        │   │                                               └─┬─ unary_expression: -
+        │   │                                                 └─┬─ unary_expression: -
+        │   │                                                   └─┬─ unary_expression: -
+        │   │                                                     └─┬─ unary_expression: -
+        │   │                                                       └─┬─ unary_expression: -
+        │   │                                                         └─┬─ unary_expression: -
+        │   │                                                           └─┬─ unary_expression: -
+        │   │                                                             └─┬─ unary_expression: -
+        │   │                                                               └─┬─ unary_expression: -
+        │   │                                                                 └─┬─ unary_expression: +
+        │   │                                                                   └─┬─ unary_expression: +
+        │   │                                                                     └─┬─ unary_expression: +
+        │   │                                                                       └─ constant: int, 5
+        │   └─ constant: string, "\n"
+        ├─┬─ print
+        │ └─┬───────────────┬─ binary_expression: *
+        │   │               ├───┬─ binary_expression: +
+        │   │               │   ├─ constant: int, 3
+        │   │               │   └─ constant: int, 2
+        │   │               └───────────── constant: int, 2
+        │   └─ constant: string, "\n"
+        ├─┬─ if
+        │ ├─── constant: int, 1
+        │ ├─┬─ compound_statement
+        │ │ └───┬─ if
+        │ │     ├─── constant: int, 1
+        │ │     ├─┬─ compound_statement
+        │ │     │ └───┬─ if
+        │ │     │     ├─── constant: int, 1
+        │ │     │     ├─┬─ compound_statement
+        │ │     │     │ └───┬─ if
+        │ │     │     │     ├─── constant: int, 1
+        │ │     │     │     ├─┬─ compound_statement
+        │ │     │     │     │ └───┬─ if
+        │ │     │     │     │     ├─── constant: int, 1
+        │ │     │     │     │     ├─┬─ compound_statement
+        │ │     │     │     │     │ └───┬─ print
+        │ │     │     │     │     │     └─┬─ constant: int, 15
+        │ │     │     │     │     │       └─ constant: string, "\n"
+        │ │     │     │     │     └─ None
+        │ │     │     │     └─ None
+        │ │     │     └─ None
+        │ │     └─ None
+        │ └─ None
+        └─┬─ return
+          └─── constant: int, 0

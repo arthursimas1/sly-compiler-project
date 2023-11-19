@@ -1,0 +1,50 @@
+┬─ program
+└─┬─┬─ function_definition
+  │ ├─ type_specifier: int
+  │ ├─┬─ function_declarator
+  │ │ ├─ identifier: checkPrime
+  │ │ └───┬─ parameter_declaration
+  │ │     ├─ type_specifier: int
+  │ │     └─ identifier: n
+  │ └─┬─ compound_statement
+  │   ├───┬─ declaration
+  │   │   ├─ type_specifier: int
+  │   │   └─┬─┬─ init_declarator
+  │   │     │ ├─ identifier: i
+  │   │     │ └─ None
+  │   │     └─┬─ init_declarator
+  │   │       ├─ identifier: isPrime
+  │   │       └─ constant: int, 1
+  │   └─┬─┬─ for
+  │     │ ├───┬─ assign
+  │     │ │   ├─ identifier: i
+  │     │ │   └─ constant: int, 2
+  │     │ ├───┬─ binary_expression: <=
+  │     │ │   ├─ identifier: i
+  │     │ │   └─┬─ binary_expression: /
+  │     │ │     ├─ identifier: n
+  │     │ │     └─ constant: int, 2
+  │     │ ├───┬─ unary_expression: +
+  │     │ │   └─┬─ unary_expression: +
+  │     │ │     └─ identifier: i
+  │     │ └─┬─ compound_statement
+  │     │   └───┬─ if
+  │     │       ├───┬─ binary_expression: ==
+  │     │       │   ├─┬─ binary_expression: %
+  │     │       │   │ ├─ identifier: n
+  │     │       │   │ └─ identifier: i
+  │     │       │   └─ constant: int, 0
+  │     │       ├─┬─ compound_statement
+  │     │       │ └─┬───┬─ assign
+  │     │       │   │   ├─ identifier: isPrime
+  │     │       │   │   └─ constant: int, 0
+  │     │       │   └─ break
+  │     │       └─ None
+  │     └─┬─ return
+  │       └─── identifier: isPrime
+  └─┬─ function_definition
+    ├─ type_specifier: void
+    ├─┬─ function_declarator
+    │ ├─ identifier: main
+    │ └─ None
+    └─┬─ compound_statement

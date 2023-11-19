@@ -1,0 +1,138 @@
+┬─ program
+└───┬─ function_definition
+    ├─ type_specifier: int
+    ├─┬─ function_declarator
+    │ ├─ identifier: main
+    │ └─ None
+    └─┬─ compound_statement
+      ├─┬─┬─ declaration
+      │ │ ├─ type_specifier: int
+      │ │ └───┬─ init_declarator
+      │ │     ├─┬─ array_declarator
+      │ │     │ ├─ identifier: v
+      │ │     │ └─ constant: int, 100
+      │ │     └─ None
+      │ └─┬─ declaration
+      │   ├─ type_specifier: int
+      │   └─┬─┬─ init_declarator
+      │     │ ├─ identifier: n
+      │     │ └─ None
+      │     ├─┬─ init_declarator
+      │     │ ├─ identifier: c
+      │     │ └─ None
+      │     ├─┬─ init_declarator
+      │     │ ├─ identifier: d
+      │     │ └─ None
+      │     └─┬─ init_declarator
+      │       ├─ identifier: swap
+      │       └─ None
+      └─┬─┬─ print
+        │ └─── constant: string, "Enter number of elements: "
+        ├─┬─ read
+        │ └─── identifier: n
+        ├─┬─ print
+        │ └─┬─ constant: string, "Enter "
+        │   ├─ identifier: n
+        │   └─ constant: string, " integers"
+        ├─┬─ print
+        │ └─ None
+        ├─┬─ for
+        │ ├───┬─ assign
+        │ │   ├─ identifier: c
+        │ │   └─ constant: int, 0
+        │ ├───┬─ binary_expression: <
+        │ │   ├─ identifier: c
+        │ │   └─ identifier: n
+        │ ├───┬─ assign
+        │ │   ├─ identifier: c
+        │ │   └─┬─ binary_expression: +
+        │ │     ├─ identifier: c
+        │ │     └─ constant: int, 1
+        │ └─┬─ read
+        │   └───┬─ array_reference
+        │       ├─ identifier: v
+        │       └─── identifier: c
+        ├─┬─ for
+        │ ├───┬─ assign
+        │ │   ├─ identifier: c
+        │ │   └─ constant: int, 0
+        │ ├───┬─ binary_expression: <
+        │ │   ├─ identifier: c
+        │ │   └─┬─ binary_expression: -
+        │ │     ├─ identifier: n
+        │ │     └─ constant: int, 1
+        │ ├───┬─ assign
+        │ │   ├─ identifier: c
+        │ │   └─┬─ binary_expression: +
+        │ │     ├─ identifier: c
+        │ │     └─ constant: int, 1
+        │ └─┬─ for
+        │   ├───┬─ assign
+        │   │   ├─ identifier: d
+        │   │   └─ constant: int, 0
+        │   ├───┬─ binary_expression: <
+        │   │   ├─ identifier: d
+        │   │   └─┬─ binary_expression: -
+        │   │     ├─┬─ binary_expression: -
+        │   │     │ ├─ identifier: n
+        │   │     │ └─ identifier: c
+        │   │     └─ constant: int, 1
+        │   ├───┬─ assign
+        │   │   ├─ identifier: d
+        │   │   └─┬─ binary_expression: +
+        │   │     ├─ identifier: d
+        │   │     └─ constant: int, 1
+        │   └─┬─ if
+        │     ├───┬─ binary_expression: >
+        │     │   ├─┬─ array_reference
+        │     │   │ ├─ identifier: v
+        │     │   │ └─── identifier: d
+        │     │   └─┬─ array_reference
+        │     │     ├─ identifier: v
+        │     │     └───┬─ binary_expression: +
+        │     │         ├─ identifier: d
+        │     │         └─ constant: int, 1
+        │     ├─┬─ compound_statement
+        │     │ └─┬───┬─ assign
+        │     │   │   ├─ identifier: swap
+        │     │   │   └─┬─ array_reference
+        │     │   │     ├─ identifier: v
+        │     │   │     └─── identifier: d
+        │     │   ├───┬─ assign
+        │     │   │   ├─┬─ array_reference
+        │     │   │   │ ├─ identifier: v
+        │     │   │   │ └─── identifier: d
+        │     │   │   └─┬─ array_reference
+        │     │   │     ├─ identifier: v
+        │     │   │     └───┬─ binary_expression: +
+        │     │   │         ├─ identifier: d
+        │     │   │         └─ constant: int, 1
+        │     │   └───┬─ assign
+        │     │       ├─┬─ array_reference
+        │     │       │ ├─ identifier: v
+        │     │       │ └───┬─ binary_expression: +
+        │     │       │     ├─ identifier: d
+        │     │       │     └─ constant: int, 1
+        │     │       └─ identifier: swap
+        │     └─ None
+        ├─┬─ print
+        │ └─── constant: string, "Sorted list in ascending order:\n"
+        ├─┬─ for
+        │ ├───┬─ assign
+        │ │   ├─ identifier: c
+        │ │   └─ constant: int, 0
+        │ ├───┬─ binary_expression: <
+        │ │   ├─ identifier: c
+        │ │   └─ identifier: n
+        │ ├───┬─ assign
+        │ │   ├─ identifier: c
+        │ │   └─┬─ binary_expression: +
+        │ │     ├─ identifier: c
+        │ │     └─ constant: int, 1
+        │ └─┬─ print
+        │   └─┬─┬─ array_reference
+        │     │ ├─ identifier: v
+        │     │ └─── identifier: c
+        │     └─ constant: string, " "
+        └─┬─ return
+          └─── constant: int, 0

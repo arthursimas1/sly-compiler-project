@@ -1,0 +1,42 @@
+┬─ program
+└───┬─ function_definition
+    ├─ type_specifier: int
+    ├─┬─ function_declarator
+    │ ├─ identifier: main
+    │ └─ None
+    └─┬─ compound_statement
+      └─┬───┬─ assign
+        │   ├─ identifier: a
+        │   └───┬─ binary_expression: *
+        │       ├─┬─ unary_expression: -
+        │       │ └─ constant: int, 1
+        │       └───┬─ binary_expression: %
+        │           ├─┬─ binary_expression: /
+        │           │ ├───┬─ binary_expression: *
+        │           │ │   ├─┬─ unary_expression: -
+        │           │ │   │ └─ constant: int, 1
+        │           │ │   └───┬─ binary_expression: *
+        │           │ │       ├─ constant: int, 5
+        │           │ │       └─ constant: int, 15
+        │           │ └─ constant: int, 10
+        │           └─ constant: int, 10
+        ├─┬─ print
+        │ └─┬─ identifier: a
+        │   └─ constant: string, "\n"
+        ├───┬─ assign
+        │   ├─ identifier: b
+        │   └─┬─ unary_expression: -
+        │     └─ identifier: a
+        ├─┬─ print
+        │ └─┬─ identifier: b
+        │   └─ constant: string, "\n"
+        ├─┬─ print
+        │ └─┬─┬─ unary_expression: -
+        │   │ └─ identifier: b
+        │   └─ constant: string, "\n"
+        ├─┬─ print
+        │ └─┬─┬─ unary_expression: -
+        │   │ └─── constant: int, 1
+        │   └─ constant: string, "\n"
+        └─┬─ return
+          └─── constant: int, 0

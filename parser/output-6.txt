@@ -1,0 +1,61 @@
+┬─ program
+└─┬─┬─ global_declaration
+  │ └─┬─ declaration
+  │   ├─ type_specifier: int
+  │   └───┬─ init_declarator
+  │       ├─ identifier: MAX
+  │       └─ constant: int, 4
+  └─┬─ function_definition
+    ├─ type_specifier: int
+    ├─┬─ function_declarator
+    │ ├─ identifier: main
+    │ └─ None
+    └─┬─ compound_statement
+      ├─┬─┬─ declaration
+      │ │ ├─ type_specifier: int
+      │ │ └───┬─ init_declarator
+      │ │     ├─┬─ array_declarator
+      │ │     │ ├─ identifier: var
+      │ │     │ └─ None
+      │ │     └─┬─ constant: int, 10
+      │ │       ├─ constant: int, 20
+      │ │       ├─ constant: int, 40
+      │ │       └─ constant: int, 80
+      │ └─┬─ declaration
+      │   ├─ type_specifier: int
+      │   └───┬─ init_declarator
+      │       ├─ identifier: aux
+      │       └─ None
+      └─┬───┬─ assign
+        │   ├─ identifier: aux
+        │   └─┬─ array_reference
+        │     ├─ identifier: var
+        │     └─── constant: int, 0
+        ├─┬─ for
+        │ ├─┬─ declaration
+        │ │ ├─ type_specifier: int
+        │ │ └───┬─ init_declarator
+        │ │     ├─ identifier: i
+        │ │     └─ constant: int, 0
+        │ ├───┬─ binary_expression: <
+        │ │   ├─ identifier: i
+        │ │   └─ identifier: MAX
+        │ ├───┬─ assign
+        │ │   ├─ identifier: i
+        │ │   └─┬─ binary_expression: +
+        │ │     ├─ identifier: i
+        │ │     └─ constant: int, 1
+        │ └─┬─ compound_statement
+        │   └─┬─┬─ assert
+        │     │ └───┬─ binary_expression: ==
+        │     │     ├─┬─ array_reference
+        │     │     │ ├─ identifier: var
+        │     │     │ └─── identifier: i
+        │     │     └─ identifier: aux
+        │     └───┬─ assign
+        │         ├─ identifier: aux
+        │         └─┬─ binary_expression: *
+        │           ├─ identifier: aux
+        │           └─ constant: int, 2
+        └─┬─ return
+          └─── constant: int, 0

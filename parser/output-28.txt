@@ -1,0 +1,63 @@
+┬─ program
+└───┬─ function_definition
+    ├─ type_specifier: int
+    ├─┬─ function_declarator
+    │ ├─ identifier: main
+    │ └─ None
+    └─┬─ compound_statement
+      ├─┬─┬─ declaration
+      │ │ ├─ type_specifier: int
+      │ │ └───┬─ init_declarator
+      │ │     ├─┬─ array_declarator
+      │ │     │ ├─ identifier: v
+      │ │     │ └─ None
+      │ │     └─┬─ constant: int, 1
+      │ │       ├─ constant: int, 2
+      │ │       └─ constant: int, 5
+      │ ├─┬─ declaration
+      │ │ ├─ type_specifier: char
+      │ │ └───┬─ init_declarator
+      │ │     ├─┬─ array_declarator
+      │ │     │ ├─ identifier: s
+      │ │     │ └─ None
+      │ │     └─ constant: string, "xpto"
+      │ ├─┬─ declaration
+      │ │ ├─ type_specifier: int
+      │ │ └───┬─ init_declarator
+      │ │     ├─┬─ array_declarator
+      │ │     │ ├─┬─ array_declarator
+      │ │     │ │ ├─ identifier: m
+      │ │     │ │ └─ None
+      │ │     │ └─ None
+      │ │     └─┬─┬─ constant: int, 1
+      │ │       │ └─ constant: int, 3
+      │ │       ├─┬─ constant: int, 2
+      │ │       │ └─ constant: int, 6
+      │ │       └─┬─ constant: int, 3
+      │ │         └─ constant: int, 9
+      │ └─┬─ declaration
+      │   ├─ type_specifier: int
+      │   └─┬─┬─ init_declarator
+      │     │ ├─ identifier: i
+      │     │ └─ constant: int, 1
+      │     └─┬─ init_declarator
+      │       ├─ identifier: j
+      │       └─ constant: int, 0
+      └─┬─┬─ print
+        │ └─┬─ constant: string, "Isto é um teste:"
+        │   └─┬─ array_reference
+        │     ├─ identifier: s
+        │     └───┬─ binary_expression: +
+        │         ├─ identifier: j
+        │         └─ constant: int, 2
+        ├─┬─ print
+        │ └─┬─┬─ array_reference
+        │   │ ├─ identifier: v
+        │   │ └─── identifier: i
+        │   └─┬─ array_reference
+        │     ├─┬─ array_reference
+        │     │ ├─ identifier: m
+        │     │ └─── identifier: i
+        │     └─── identifier: j
+        └─┬─ return
+          └─── constant: int, 0

@@ -1,0 +1,89 @@
+┬─ program
+└───┬─ function_definition
+    ├─ type_specifier: int
+    ├─┬─ function_declarator
+    │ ├─ identifier: main
+    │ └─ None
+    └─┬─ compound_statement
+      ├───┬─ declaration
+      │   ├─ type_specifier: int
+      │   └─┬─┬─ init_declarator
+      │     │ ├─ identifier: n1
+      │     │ └─ None
+      │     ├─┬─ init_declarator
+      │     │ ├─ identifier: n2
+      │     │ └─ None
+      │     ├─┬─ init_declarator
+      │     │ ├─ identifier: i
+      │     │ └─ None
+      │     ├─┬─ init_declarator
+      │     │ ├─ identifier: j
+      │     │ └─ None
+      │     └─┬─ init_declarator
+      │       ├─ identifier: flag
+      │       └─ None
+      └─┬─┬─ print
+        │ └─── constant: string, "Enter 2 numbers (intervals) separated by space: "
+        ├─┬─ read
+        │ └─┬─ identifier: n1
+        │   └─ identifier: n2
+        ├─┬─ print
+        │ └─┬─ constant: string, "Prime numbers between "
+        │   ├─ identifier: n1
+        │   ├─ constant: string, " and "
+        │   ├─ identifier: n2
+        │   └─ constant: string, " are:"
+        ├─┬─ print
+        │ └─ None
+        ├─┬─ for
+        │ ├───┬─ assign
+        │ │   ├─ identifier: i
+        │ │   └─ identifier: n1
+        │ ├───┬─ binary_expression: <=
+        │ │   ├─ identifier: i
+        │ │   └─ identifier: n2
+        │ ├───┬─ assign
+        │ │   ├─ identifier: i
+        │ │   └─┬─ binary_expression: +
+        │ │     ├─ identifier: i
+        │ │     └─ constant: int, 1
+        │ └─┬─ compound_statement
+        │   └─┬───┬─ assign
+        │     │   ├─ identifier: flag
+        │     │   └─ constant: int, 1
+        │     ├─┬─ for
+        │     │ ├───┬─ assign
+        │     │ │   ├─ identifier: j
+        │     │ │   └─ constant: int, 2
+        │     │ ├───┬─ binary_expression: <=
+        │     │ │   ├─ identifier: j
+        │     │ │   └─┬─ binary_expression: /
+        │     │ │     ├─ identifier: i
+        │     │ │     └─ constant: int, 2
+        │     │ ├───┬─ assign
+        │     │ │   ├─ identifier: j
+        │     │ │   └─┬─ binary_expression: +
+        │     │ │     ├─ identifier: j
+        │     │ │     └─ constant: int, 1
+        │     │ └─┬─ if
+        │     │   ├───┬─ binary_expression: ==
+        │     │   │   ├─┬─ binary_expression: %
+        │     │   │   │ ├─ identifier: i
+        │     │   │   │ └─ identifier: j
+        │     │   │   └─ constant: int, 0
+        │     │   ├─┬─ compound_statement
+        │     │   │ └─┬───┬─ assign
+        │     │   │   │   ├─ identifier: flag
+        │     │   │   │   └─ constant: int, 0
+        │     │   │   └─ break
+        │     │   └─ None
+        │     └─┬─ if
+        │       ├───┬─ binary_expression: ==
+        │       │   ├─ identifier: flag
+        │       │   └─ constant: int, 1
+        │       ├─┬─ print
+        │       │ └─┬─ identifier: i
+        │       │   └─ constant: string, "  "
+        │       └─ None
+        └─┬─ return
+          └─── constant: int, 0

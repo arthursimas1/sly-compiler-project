@@ -1,0 +1,169 @@
+┬─ program
+└───┬─ function_definition
+    ├─ type_specifier: int
+    ├─┬─ function_declarator
+    │ ├─ identifier: main
+    │ └─ None
+    └─┬─ compound_statement
+      ├─┬─┬─ declaration
+      │ │ ├─ type_specifier: int
+      │ │ └───┬─ init_declarator
+      │ │     ├─ identifier: left_edge
+      │ │     └─┬─ unary_expression: -
+      │ │       └─ constant: int, 420
+      │ ├─┬─ declaration
+      │ │ ├─ type_specifier: int
+      │ │ └───┬─ init_declarator
+      │ │     ├─ identifier: right_edge
+      │ │     └─ constant: int, 300
+      │ ├─┬─ declaration
+      │ │ ├─ type_specifier: int
+      │ │ └───┬─ init_declarator
+      │ │     ├─ identifier: top_edge
+      │ │     └─ constant: int, 300
+      │ ├─┬─ declaration
+      │ │ ├─ type_specifier: int
+      │ │ └───┬─ init_declarator
+      │ │     ├─ identifier: bottom_edge
+      │ │     └─┬─ unary_expression: -
+      │ │       └─ constant: int, 300
+      │ ├─┬─ declaration
+      │ │ ├─ type_specifier: int
+      │ │ └───┬─ init_declarator
+      │ │     ├─ identifier: x_step
+      │ │     └─ constant: int, 7
+      │ ├─┬─ declaration
+      │ │ ├─ type_specifier: int
+      │ │ └───┬─ init_declarator
+      │ │     ├─ identifier: y_step
+      │ │     └─ constant: int, 15
+      │ ├─┬─ declaration
+      │ │ ├─ type_specifier: int
+      │ │ └───┬─ init_declarator
+      │ │     ├─ identifier: max_iter
+      │ │     └─ constant: int, 200
+      │ └─┬─ declaration
+      │   ├─ type_specifier: int
+      │   └───┬─ init_declarator
+      │       ├─ identifier: y0
+      │       └─ identifier: top_edge
+      └─┬─┬─ while
+        │ ├───┬─ binary_expression: >
+        │ │   ├─ identifier: y0
+        │ │   └─ identifier: bottom_edge
+        │ └─┬─ compound_statement
+        │   ├───┬─ declaration
+        │   │   ├─ type_specifier: int
+        │   │   └───┬─ init_declarator
+        │   │       ├─ identifier: x0
+        │   │       └─ identifier: left_edge
+        │   └─┬─┬─ while
+        │     │ ├───┬─ binary_expression: <
+        │     │ │   ├─ identifier: x0
+        │     │ │   └─ identifier: right_edge
+        │     │ └─┬─ compound_statement
+        │     │   ├─┬─┬─ declaration
+        │     │   │ │ ├─ type_specifier: int
+        │     │   │ │ └───┬─ init_declarator
+        │     │   │ │     ├─ identifier: y
+        │     │   │ │     └─ constant: int, 0
+        │     │   │ ├─┬─ declaration
+        │     │   │ │ ├─ type_specifier: int
+        │     │   │ │ └───┬─ init_declarator
+        │     │   │ │     ├─ identifier: x
+        │     │   │ │     └─ constant: int, 0
+        │     │   │ ├─┬─ declaration
+        │     │   │ │ ├─ type_specifier: char
+        │     │   │ │ └───┬─ init_declarator
+        │     │   │ │     ├─ identifier: the_char
+        │     │   │ │     └─ constant: char, ' '
+        │     │   │ └─┬─ declaration
+        │     │   │   ├─ type_specifier: int
+        │     │   │   └───┬─ init_declarator
+        │     │   │       ├─ identifier: i
+        │     │   │       └─ constant: int, 0
+        │     │   └─┬─┬─ while
+        │     │     │ ├───┬─ binary_expression: <
+        │     │     │ │   ├─ identifier: i
+        │     │     │ │   └─ identifier: max_iter
+        │     │     │ └─┬─ compound_statement
+        │     │     │   ├─┬─┬─ declaration
+        │     │     │   │ │ ├─ type_specifier: int
+        │     │     │   │ │ └───┬─ init_declarator
+        │     │     │   │ │     ├─ identifier: x_x
+        │     │     │   │ │     └─┬─ binary_expression: /
+        │     │     │   │ │       ├───┬─ binary_expression: *
+        │     │     │   │ │       │   ├─ identifier: x
+        │     │     │   │ │       │   └─ identifier: x
+        │     │     │   │ │       └─ constant: int, 200
+        │     │     │   │ └─┬─ declaration
+        │     │     │   │   ├─ type_specifier: int
+        │     │     │   │   └───┬─ init_declarator
+        │     │     │   │       ├─ identifier: y_y
+        │     │     │   │       └─┬─ binary_expression: /
+        │     │     │   │         ├───┬─ binary_expression: *
+        │     │     │   │         │   ├─ identifier: y
+        │     │     │   │         │   └─ identifier: y
+        │     │     │   │         └─ constant: int, 200
+        │     │     │   └─┬─┬─ if
+        │     │     │     │ ├───┬─ binary_expression: >
+        │     │     │     │ │   ├─┬─ binary_expression: +
+        │     │     │     │ │   │ ├─ identifier: x_x
+        │     │     │     │ │   │ └─ identifier: y_y
+        │     │     │     │ │   └─ constant: int, 800
+        │     │     │     │ ├─┬─ compound_statement
+        │     │     │     │ │ └─┬───┬─ assign
+        │     │     │     │ │   │   ├─ identifier: the_char
+        │     │     │     │ │   │   └─┬─ binary_expression: +
+        │     │     │     │ │   │     ├─ constant: char, '0'
+        │     │     │     │ │   │     └─ identifier: i
+        │     │     │     │ │   ├─┬─ if
+        │     │     │     │ │   │ ├───┬─ binary_expression: >
+        │     │     │     │ │   │ │   ├─ identifier: i
+        │     │     │     │ │   │ │   └─ constant: int, 9
+        │     │     │     │ │   │ ├─┬─ compound_statement
+        │     │     │     │ │   │ │ └─────┬─ assign
+        │     │     │     │ │   │ │       ├─ identifier: the_char
+        │     │     │     │ │   │ │       └─ constant: char, '@'
+        │     │     │     │ │   │ └─ None
+        │     │     │     │ │   └───┬─ assign
+        │     │     │     │ │       ├─ identifier: i
+        │     │     │     │ │       └─ identifier: max_iter
+        │     │     │     │ └─ None
+        │     │     │     ├───┬─ assign
+        │     │     │     │   ├─ identifier: y
+        │     │     │     │   └─┬─ binary_expression: +
+        │     │     │     │     ├─┬─ binary_expression: /
+        │     │     │     │     │ ├─┬─ binary_expression: *
+        │     │     │     │     │ │ ├─ identifier: x
+        │     │     │     │     │ │ └─ identifier: y
+        │     │     │     │     │ └─ constant: int, 100
+        │     │     │     │     └─ identifier: y0
+        │     │     │     ├───┬─ assign
+        │     │     │     │   ├─ identifier: x
+        │     │     │     │   └─┬─ binary_expression: +
+        │     │     │     │     ├─┬─ binary_expression: -
+        │     │     │     │     │ ├─ identifier: x_x
+        │     │     │     │     │ └─ identifier: y_y
+        │     │     │     │     └─ identifier: x0
+        │     │     │     └───┬─ assign
+        │     │     │         ├─ identifier: i
+        │     │     │         └─┬─ binary_expression: +
+        │     │     │           ├─ identifier: i
+        │     │     │           └─ constant: int, 1
+        │     │     ├─┬─ print
+        │     │     │ └─── identifier: the_char
+        │     │     └───┬─ assign
+        │     │         ├─ identifier: x0
+        │     │         └─┬─ binary_expression: +
+        │     │           ├─ identifier: x0
+        │     │           └─ identifier: x_step
+        │     ├─┬─ print
+        │     │ └─── constant: char, '\n'
+        │     └───┬─ assign
+        │         ├─ identifier: y0
+        │         └─┬─ binary_expression: -
+        │           ├─ identifier: y0
+        │           └─ identifier: y_step
+        └─┬─ return
+          └─── constant: int, 0

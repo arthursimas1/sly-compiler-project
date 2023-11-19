@@ -1,0 +1,43 @@
+┬─ program
+└─┬─┬─ global_declaration
+  │ └─┬─ declaration
+  │   ├─ type_specifier: int
+  │   └───┬─ init_declarator
+  │       ├─ identifier: n
+  │       └─ constant: int, 3
+  ├─┬─ function_definition
+  │ ├─ type_specifier: int
+  │ ├─┬─ function_declarator
+  │ │ ├─ identifier: doubleMe
+  │ │ └───┬─ parameter_declaration
+  │ │     ├─ type_specifier: int
+  │ │     └─ identifier: x
+  │ └─┬─ compound_statement
+  │   └───┬─ return
+  │       └───┬─ binary_expression: *
+  │           ├─ identifier: x
+  │           └─ identifier: x
+  └─┬─ function_definition
+    ├─ type_specifier: void
+    ├─┬─ function_declarator
+    │ ├─ identifier: main
+    │ └─ None
+    └─┬─ compound_statement
+      ├───┬─ declaration
+      │   ├─ type_specifier: int
+      │   └───┬─ init_declarator
+      │       ├─ identifier: v
+      │       └─ identifier: n
+      └─┬───┬─ assign
+        │   ├─ identifier: v
+        │   └─┬─ function_call
+        │     ├─ identifier: doubleMe
+        │     └─── identifier: v
+        ├─┬─ assert
+        │ └───┬─ binary_expression: ==
+        │     ├─ identifier: v
+        │     └─┬─ binary_expression: *
+        │       ├─ identifier: n
+        │       └─ identifier: n
+        └─┬─ return
+          └─ None

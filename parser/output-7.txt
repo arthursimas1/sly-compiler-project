@@ -1,0 +1,43 @@
+┬─ program
+└───┬─ function_definition
+    ├─ type_specifier: int
+    ├─┬─ function_declarator
+    │ ├─ identifier: main
+    │ └─ None
+    └─┬─ compound_statement
+      ├─┬─┬─ declaration
+      │ │ ├─ type_specifier: int
+      │ │ └─┬─┬─ init_declarator
+      │ │   │ ├─ identifier: a
+      │ │   │ └─ None
+      │ │   ├─┬─ init_declarator
+      │ │   │ ├─ identifier: b
+      │ │   │ └─ None
+      │ │   └─┬─ init_declarator
+      │ │     ├─ identifier: c
+      │ │     └─ None
+      │ └─┬─ declaration
+      │   ├─ type_specifier: int
+      │   └───┬─ init_declarator
+      │       ├─ identifier: perimeter
+      │       └─ None
+      └─┬─┬─ read
+        │ └─── identifier: a
+        ├─┬─ read
+        │ └─── identifier: b
+        ├─┬─ read
+        │ └─── identifier: c
+        ├───┬─ assign
+        │   ├─ identifier: perimeter
+        │   └─┬─ binary_expression: +
+        │     ├─┬─ binary_expression: +
+        │     │ ├─ identifier: a
+        │     │ └─ identifier: b
+        │     └─ identifier: c
+        ├─┬─ print
+        │ └─┬─ constant: string, "The perimeter of the triangle is: "
+        │   └─ identifier: perimeter
+        ├─┬─ print
+        │ └─ None
+        └─┬─ return
+          └─── constant: int, 0

@@ -1,0 +1,9 @@
+┬─ program
+└───┬─ global_declaration
+    └─┬─ declaration
+      ├─ type_specifier: int
+      └───┬─ init_declarator
+          ├─┬─ array_declarator
+          │ ├─ identifier: c
+          │ └─ constant: int, 5
+          └─ None

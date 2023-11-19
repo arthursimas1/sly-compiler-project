@@ -1,0 +1,83 @@
+┬─ program
+└───┬─ function_definition
+    ├─ type_specifier: void
+    ├─┬─ function_declarator
+    │ ├─ identifier: main
+    │ └─ None
+    └─┬─ compound_statement
+      ├─┬─┬─ declaration
+      │ │ ├─ type_specifier: int
+      │ │ └───┬─ init_declarator
+      │ │     ├─ identifier: count
+      │ │     └─ constant: int, 1
+      │ ├─┬─ declaration
+      │ │ ├─ type_specifier: int
+      │ │ └───┬─ init_declarator
+      │ │     ├─ identifier: n
+      │ │     └─ constant: int, 1
+      │ └─┬─ declaration
+      │   ├─ type_specifier: int
+      │   └───┬─ init_declarator
+      │       ├─ identifier: limit
+      │       └─ constant: int, 100
+      └─┬─┬─ while
+        │ ├───┬─ binary_expression: <
+        │ │   ├─ identifier: n
+        │ │   └─ identifier: limit
+        │ └─┬─ compound_statement
+        │   ├─┬─┬─ declaration
+        │   │ │ ├─ type_specifier: int
+        │   │ │ └───┬─ init_declarator
+        │   │ │     ├─ identifier: k
+        │   │ │     └─ constant: int, 3
+        │   │ └─┬─ declaration
+        │   │   ├─ type_specifier: int
+        │   │   └───┬─ init_declarator
+        │   │       ├─ identifier: p
+        │   │       └─ constant: int, 1
+        │   └─┬───┬─ assign
+        │     │   ├─ identifier: n
+        │     │   └─┬─ binary_expression: +
+        │     │     ├─ identifier: n
+        │     │     └─ constant: int, 2
+        │     ├─┬─ while
+        │     │ ├───┬─ binary_expression: &&
+        │     │ │   ├─┬─ binary_expression: <=
+        │     │ │   │ ├─┬─ binary_expression: *
+        │     │ │   │ │ ├─ identifier: k
+        │     │ │   │ │ └─ identifier: k
+        │     │ │   │ └─ identifier: n
+        │     │ │   └─ identifier: p
+        │     │ └─┬─ compound_statement
+        │     │   └─┬───┬─ assign
+        │     │     │   ├─ identifier: p
+        │     │     │   └─┬─ binary_expression: !=
+        │     │     │     ├─┬─ binary_expression: *
+        │     │     │     │ ├─┬─ binary_expression: /
+        │     │     │     │ │ ├─ identifier: n
+        │     │     │     │ │ └─ identifier: k
+        │     │     │     │ └─ identifier: k
+        │     │     │     └─ identifier: n
+        │     │     └───┬─ assign
+        │     │         ├─ identifier: k
+        │     │         └─┬─ binary_expression: +
+        │     │           ├─ identifier: k
+        │     │           └─ constant: int, 2
+        │     └─┬─ if
+        │       ├─── identifier: p
+        │       ├─┬─ compound_statement
+        │       │ └─┬─┬─ print
+        │       │   │ └─┬─ identifier: n
+        │       │   │   └─ constant: string, " is prime\n"
+        │       │   └───┬─ assign
+        │       │       ├─ identifier: count
+        │       │       └─┬─ binary_expression: +
+        │       │         ├─ identifier: count
+        │       │         └─ constant: int, 1
+        │       └─ None
+        ├─┬─ print
+        │ └─┬─ constant: string, "Total primes found: "
+        │   ├─ identifier: count
+        │   └─ constant: string, "\n"
+        └─┬─ return
+          └─ None

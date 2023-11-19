@@ -1,0 +1,44 @@
+/*
+ This is an integer ascii Mandelbrot generator
+ */
+int main()
+{
+    int left_edge   = -420;
+    int right_edge  =  300;
+    int top_edge    =  300;
+    int bottom_edge = -300;
+    int x_step      =    7;
+    int y_step      =   15;
+ 
+    int max_iter    =  200;
+ 
+    int y0 = top_edge;
+    while (y0 > bottom_edge) {
+        int x0 = left_edge;
+        while (x0 < right_edge) {
+            int y = 0;
+            int x = 0;
+            char the_char = ' ';
+            int i = 0;
+            while (i < max_iter) {
+                int x_x = (x * x) / 200;
+                int y_y = (y * y) / 200;
+                if (x_x + y_y > 800 ) {
+                    the_char = '0' + i;
+                    if (i > 9) {
+                        the_char = '@';
+                    }
+                    i = max_iter;
+                }
+                y = x * y / 100 + y0;
+                x = x_x - y_y + x0;
+                i = i + 1;
+            }
+            print(the_char);
+            x0 = x0 + x_step;
+        }
+        print('\n');
+        y0 = y0 - y_step;
+    }
+	return 0;
+}
